@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wellness-themed design system with nature-inspired colors and smooth animations */
+
+@layer base {
+  :root {
+    /* Core wellness color palette */
+    --background: 0 0% 100%;
+    --foreground: 210 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    /* Primary - calming green */
+    --primary: 140 65% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 140 50% 60%;
+    --primary-dark: 140 70% 35%;
+
+    /* Secondary - soft earth tone */
+    --secondary: 25 30% 92%;
+    --secondary-foreground: 210 15% 20%;
+
+    /* Accent - peaceful blue */
+    --accent: 200 70% 55%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 200 60% 70%;
+
+    /* Wellness gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(140 65% 45%), hsl(200 70% 55%));
+    --gradient-calm: linear-gradient(180deg, hsl(140 30% 96%), hsl(200 30% 96%));
+    --gradient-hero: linear-gradient(135deg, hsl(140 50% 60%), hsl(200 60% 70%));
+
+    /* Neutral tones */
+    --muted: 210 20% 96%;
+    --muted-foreground: 210 10% 45%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 95%;
+    --ring: 140 65% 45%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark mode wellness theme */
+    --background: 210 20% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 15% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 15% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - bright wellness green */
+    --primary: 140 60% 55%;
+    --primary-foreground: 210 20% 8%;
+    --primary-light: 140 50% 70%;
+    --primary-dark: 140 65% 40%;
+
+    /* Secondary - warm dark tone */
+    --secondary: 210 15% 18%;
+    --secondary-foreground: 0 0% 90%;
+
+    /* Accent - bright calming blue */
+    --accent: 200 65% 60%;
+    --accent-foreground: 210 20% 8%;
+    --accent-light: 200 55% 75%;
+
+    /* Dark mode gradients */
+    --gradient-wellness: linear-gradient(135deg, hsl(140 60% 55%), hsl(200 65% 60%));
+    --gradient-calm: linear-gradient(180deg, hsl(210 15% 12%), hsl(210 15% 16%));
+    --gradient-hero: linear-gradient(135deg, hsl(140 50% 50%), hsl(200 60% 55%));
+
+    --muted: 210 15% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 210 15% 20%;
+    --input: 210 15% 18%;
+    --ring: 140 60% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-calm);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Wellness animations */
+  .wellness-card {
+    @apply transition-all duration-300 ease-out hover:scale-[1.02] hover:shadow-lg;
+  }
+  
+  .tip-card {
+    @apply wellness-card bg-card border border-border rounded-xl p-6 cursor-pointer;
+    background: linear-gradient(135deg, hsl(var(--card)), hsl(var(--card)/0.8));
+    backdrop-filter: blur(10px);
+  }
+  
+  .wellness-button {
+    @apply transition-all duration-200 ease-out hover:scale-105 active:scale-95;
+  }
+  
+  .pulse-gentle {
+    @apply animate-pulse;
+    animation-duration: 2s;
+  }
+  
+  .fade-in {
+    @apply animate-[fadeIn_0.5s_ease-out_forwards];
+  }
+  
+  .slide-up {
+    @apply animate-[slideUp_0.4s_ease-out_forwards];
+  }
+}
+
+@layer utilities {
+  .gradient-wellness {
+    background: var(--gradient-wellness);
+  }
+  
+  .gradient-calm {
+    background: var(--gradient-calm);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
