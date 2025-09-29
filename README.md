@@ -16,7 +16,10 @@ AI-powered wellness recommendations tailored specifically for you. Transform you
 
 - 🔮 **AI-Powered Recommendations** – Get wellness tips tailored to your profile.  
 - ❤️ **Save & Unsave Tips** – Keep track of your favorite health tips.  
-- 📖 **Detailed Explanations** – Understand why each tip works with science-backed details.  
+- 📖 **Detailed Explanations** – Understand why each tip works with science-backed details.
+- ✨ **Animations** - mooth page transitions, button hover effects, or loading animations to enhance user experience.
+- 🌙 **Dark Mode / Theme Switching** -  Option for users to toggle between light and dark themes.
+- 📱 **Responsive Design Enhancements** - Additional tweaks for mobile and tablet views.  
 - 🪴 **Step-by-Step Guidance** – Actionable steps to help you start your wellness journey.  
 - 🎨 **Modern UI** – Built with Tailwind + shadcn-ui for a clean and responsive design.  
 - 🌍 **Deployed on Vercel** – Fast, secure, and globally accessible.  
